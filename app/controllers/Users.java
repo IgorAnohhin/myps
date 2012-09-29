@@ -1,5 +1,10 @@
 package controllers;
 
+import play.*;
+import play.mvc.*;
+
+import models.User;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Igor
@@ -7,5 +12,8 @@ package controllers;
  * Time: 23:33
  * To change this template use File | Settings | File Templates.
  */
-public class Users {
+@CRUD.For(User.class)
+@With(Secure.class)
+public class Users extends CRUD {
+
 }

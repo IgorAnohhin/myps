@@ -1,10 +1,13 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-    <title></title>
-</head>
-<body>
+*{ Display a posts }*
 
-</body>
-</html>
+<div class="team-text">
+    <h2>My works</h2>
+    <div class="star-divider"></div>
+</div>
+#{list items:_post, as:'post'}
+<div class="about">
+    <h4>${post.getTitle()}</h4>
+    <p>${post.getContent().raw()}</p>
+</div>
+<div class="spacer"></div>
+#{/list}

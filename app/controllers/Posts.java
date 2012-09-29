@@ -1,5 +1,10 @@
 package controllers;
 
+import play.*;
+import play.mvc.*;
+
+import models.Post;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Igor
@@ -7,5 +12,9 @@ package controllers;
  * Time: 23:11
  * To change this template use File | Settings | File Templates.
  */
-public class Posts {
+
+@CRUD.For(Post.class)
+@With(Secure.class)
+public class Posts extends CRUD{
+
 }

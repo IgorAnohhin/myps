@@ -1,2 +1,6 @@
 #{extends 'main.html' /}
-#{set title:'Home' /}
+#{set title:'About myself' /}
+
+#{if frontPost}
+    #{display post:frontPost /}
+#{/if}

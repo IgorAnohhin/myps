@@ -6,6 +6,12 @@
       <sourceFolder url="file://$MODULE_DIR$/app" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
     </content>
+    <content url="file://c:/play/modules/crud">
+      <sourceFolder url="file://c:/play/modules/crud/app" isTestSource="false" />
+    </content>
+    <content url="file://c:/play/modules/secure">
+      <sourceFolder url="file://c:/play/modules/secure/app" isTestSource="false" />
+    </content>
     <orderEntry type="jdk" jdkName="1.6" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />

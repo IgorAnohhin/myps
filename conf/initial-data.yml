@@ -1,0 +1,79 @@
+# you describe your data using the YAML notation here
+# and then load them using Fixtures.load("data.yml")
+
+# Test data
+
+User(my):
+    email:          igor@post.ee
+    fullName:       Igor
+    password:       pass
+    isAdmin:        true
+    posts:          [p1, p2, p3]
+
+Post(p1):
+    title:          A little about myself
+    postedDate:     2012-09-25
+    author:         my
+    isFront:        true
+    content:        >
+                    Phone (mobile): +372 53 73 7931
+                    e-mail: <a href="mailto:programming@ianohhin.eu">programming@ianohhin.eu</a>
+
+                    Welcome to my online portfolio !
+                    My name is Igor Anohhin, I am a freelance programmer living in Tallinn, Estonia. I have graduated with a bachelor's degree in Programming at Tallinn Computer Science College and this portfolio showcases my work as a web developer , as well as it highlights some of the website projects I have taken part in.
+                    I am open to work with companies and individuals.I create simple, useable and accessible websites built according to web standards.
+                    To find out more about my background you can check out my CV.
+                    If you're interested in learning more, or would like to find out pricing information, get in touch with me by e-mail or by filling in the form here.
+
+Post(p2):
+    title:          Post Title 2
+    postedDate:     2012-09-25
+    author:         my
+    isFront:        false
+    content:        >
+                    Welcome to my online portfolio !
+                    My name is Igor Anohhin, I am a freelance programmer living in Tallinn, Estonia. I have graduated with a bachelor's degree in Programming at Tallinn Computer Science College and this portfolio showcases my work as a web developer , as well as it highlights some of the website projects I have taken part in.
+                    I am open to work with companies and individuals.I create simple, useable and accessible websites built according to web standards.
+                    To find out more about my background you can check out my CV.
+                    If you're interested in learning more, or would like to find out pricing information, get in touch with me by e-mail or by filling in the form here.
+
+Post(p3):
+    title:          Post Title 3
+    postedDate:     2012-09-25
+    author:         my
+    isFront:        false
+    content:        >
+                    Welcome to my online portfolio !
+                    My name is Igor Anohhin, I am a freelance programmer living in Tallinn, Estonia. I have graduated with a bachelor's degree in Programming at Tallinn Computer Science College and this portfolio showcases my work as a web developer , as well as it highlights some of the website projects I have taken part in.
+                    I am open to work with companies and individuals.I create simple, useable and accessible websites built according to web standards.
+                    To find out more about my background you can check out my CV.
+                    If you're interested in learning more, or would like to find out pricing information, get in touch with me by e-mail or by filling in the form here.
+
+Post(p4):
+    title:          Post Title 4
+    postedDate:     2012-09-25
+    author:         my
+    isFront:        false
+    content:        >
+                    Welcome to my online portfolio !
+                    My name is Igor Anohhin, I am a freelance programmer living in Tallinn, Estonia. I have graduated with a bachelor's degree in Programming at Tallinn Computer Science College and this portfolio showcases my work as a web developer , as well as it highlights some of the website projects I have taken part in.
+                    I am open to work with companies and individuals.I create simple, useable and accessible websites built according to web standards.
+                    To find out more about my background you can check out my CV.
+                    If you're interested in learning more, or would like to find out pricing information, get in touch with me by e-mail or by filling in the form here.
+
+Post(p5):
+    title:          Skills
+    postedDate:     2012-09-25
+    author:         my
+    isFront:        false
+    content:        >
+                    I am specializing in creation of web applications, back-end programming and front-end development.
+                    My experience includes the usage of Java (Spring, JSP), Javascript (Jquery, Ajax), PHP/MySQL and .NET.
+                    I take care of the front-end construction (html/javascript interface) as well as the backend programming (business model and database interaction).
+
+                    Technologies I like to use are listed below but I am always looking to learn new ones.
+
+                    - J2EE (Spring, JSP)
+                    - PHP/MySQL
+                    - Javascript (Jquery, Ajax)
+                    - Databases: MySQL, SQL Server

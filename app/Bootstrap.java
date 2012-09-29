@@ -1,9 +1,22 @@
+import play.*;
+import play.jobs.*;
+import play.test.*;
+
+import models.*;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Igor
- * Date: 25.09.12
- * Time: 19:42
+ * Date: 23.09.12
+ * Time: 21:39
  * To change this template use File | Settings | File Templates.
  */
-public class Bootstrap {
+@OnApplicationStart
+public class Bootstrap extends Job {
+
+    public void doJob() {
+        if(User.count() == 0) {
+            Fixtures.loadModels("initial-data.yml");
+        }
+    }
 }
