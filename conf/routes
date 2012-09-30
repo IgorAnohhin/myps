@@ -9,6 +9,7 @@ GET     /contact                                Application.contact
 GET     /captcha                                Application.captcha
 GET     /skills                                 Application.skills
 GET     /interests                              Application.myInterests
+GET     /admin/?                                Admin.index
 POST    /contact                                Application.saveContact
 
 # Ignore favicon requests

@@ -18,9 +18,9 @@ public class BasicTest extends UnitTest {
         assertEquals("Igor", igor.getFullName());
         assertEquals("igor@post.ee", igor.getEmail());
 
-        assertNotNull(User.connect("igor@post.ee", "pass"));
-        assertEquals("Igor", User.connect("igor@post.ee", "pass").getFullName());
-        assertEquals("igor@post.ee", User.connect("igor@post.ee", "pass").getEmail());
+        assertNotNull(User.connect("Igor", "pass"));
+        assertEquals("Igor", User.connect("Igor", "pass").getFullName());
+        assertEquals("igor@post.ee", User.connect("Igor", "pass").getEmail());
     }
 
     @Test

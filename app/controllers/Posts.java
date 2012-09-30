@@ -14,6 +14,7 @@ import models.Post;
  */
 
 @CRUD.For(Post.class)
+@Check("admin")
 @With(Secure.class)
 public class Posts extends CRUD{
 

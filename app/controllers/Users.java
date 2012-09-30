@@ -13,6 +13,7 @@ import models.User;
  * To change this template use File | Settings | File Templates.
  */
 @CRUD.For(User.class)
+@Check("admin")
 @With(Secure.class)
 public class Users extends CRUD {
 
