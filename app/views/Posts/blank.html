@@ -1,0 +1,62 @@
+#{extends 'CRUD/layout.html' /}
+#{set title:messages.get('crud.blank.title', type.modelName) /}
+
+<div id="crudBlank" class="${type.name}">
+
+    <h2 id="crudBlankTitle">&{'crud.blank.title', type.modelName}</h2>
+
+    <div class="objectForm">
+    #{form action:@create(), enctype:'multipart/form-data'}
+        #{crud.form}
+            #{crud.custom 'content'}
+            <table style="border:none;border-spacing:0;">
+                <tr>
+                    <td width="20%" valign="top">
+                        <label for="content">
+                            &{'content'}
+                        </label>
+                    </td>
+                    <td>
+                        <textarea name="object.content" rows="15" cols="90" class="message" id="cf_message">
+                            ${params.content}
+                        </textarea>
+                    </td>
+                </tr>
+            </table>
+            <script type="text/javascript">
+                $('#cf_message').wysiwyg({
+                css: 'jquery.wysiwyg.css',
+                controls: {
+                    strikeThrough: { visible: true },
+                    underline: { visible: true },
+                    subscript: { visible: true },
+                    superscript: { visible: true },
+                    bold: { visible : true },
+                    html: { visible : true },
+                    insertOrderedList: { visible : true },
+                    removeFormat: { visible : true }
+                }
+                });
+            </script>
+            #{/crud.custom}
+
+            #{crud.custom 'postedDate'}
+                <label for="postedDate">
+                    &{'postedDate'}
+                </label>
+                <input type='text' name="object.postedDate" id="posted_date" size="10" value="${new Date().format('yyyy-MM-dd')}"/>
+                <script type="text/javascript">
+                    $("#posted_date").datepick({dateFormat: 'yyyy-mm-dd'});
+                </script>
+            #{/crud.custom}
+        #{/crud.form}
+        <p class="crudButtons">
+            <a href="@{Posts.list()}">Posts</a>
+            <input type="submit" name="_save" value="&{'crud.save', type.modelName}" />
+            <input type="submit" name="_saveAndContinue" value="&{'crud.saveAndContinue', type.modelName}" />
+            <input type="submit" name="_saveAndAddAnother" value="&{'crud.saveAndAddAnother', type.modelName}" />
+        </p>
+    #{/form}
+    </div>
+
+</div>

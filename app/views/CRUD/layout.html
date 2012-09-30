@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="${lang}">
+    <head>
+        <title>#{get 'title' /}</title>
+        <meta charset="${_response_encoding}" />
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/crud.css'}" />
+        <link rel="stylesheet" media="screen" href="@{'/public/javascripts/jwysiwyg/jquery.wysiwyg.css'}" />
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/jquery.datepick.css'}" />
+
+        <script type="text/javascript" src="@{'/public/javascripts/jquery-1.6.4.min.js'}"></script>
+        <script type="text/javascript" src="@{'/public/javascripts/jwysiwyg/jquery.wysiwyg.js'}"></script>
+        <script type="text/javascript" src="@{'/public/javascripts/jquery.datepick.js'}"></script>
+    </head>
+    <body id="crud">
+
+        <div id="crudHeader">
+            <h1><a href="/admin">&{'crud.title'}</a></h1>
+            <h4><a href="/logout">&{'logout'}</a></h4>
+        </div>
+
+#{if request.actionMethod != 'index'}
+            <div id="crudBreadcrumb">
+                #{crud.navigation }
+
+                #{/crud.navigation}
+            </div>
+#{/if}
+
+#{if flash.success}
+            <div class="crudFlash flashSuccess">
+                ${flash.success}
+            </div>
+#{/if}
+#{if flash.error || error}
+            <div class="crudFlash flashError">
+                ${error ?: flash.error}
+            </div>
+#{/if}
+
+        #{list items:errors, as:'error' }
+            ${error}
+            <br/>
+        </div>
+        #{/list}
+
+        <div id="crudContent">
+#{doLayout /}
+        </div>
+
+        <div id="crudFooter">
+        </div>
+
+    </body>
+</html>
