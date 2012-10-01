@@ -1,5 +1,7 @@
 import org.junit.*;
 import java.util.*;
+
+import play.libs.Mail;
 import play.test.*;
 import models.*;
 
@@ -51,6 +53,11 @@ public class BasicTest extends UnitTest {
         ContactForm contact = new ContactForm("Ella", "ella@post.ee", "Subject", "Message Content");
         assertNotNull(contact);
         assertEquals("Message Content", contact.getContent());
+        try{
+            contact.send();
+        } catch(Exception e) {}
+        String mail = Mail.Mock.getLastMessageReceivedBy("i.anohhin@gmail.com");
+        assertNotNull(mail);
     }
 
 }

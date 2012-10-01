@@ -1,5 +1,6 @@
 package controllers;
 
+import org.apache.commons.mail.EmailException;
 import play.*;
 import play.cache.Cache;
 import play.data.validation.*;
@@ -41,7 +42,7 @@ public class Application extends Controller {
         render(randomID);
     }
 
-    public static void saveContact(
+    public static void saveContact (
             @Required(message = "Name is required!") String name,
             @Required(message = "Email is required!") String email,
             @Required(message = "Subject is required!") String subject,
@@ -58,7 +59,13 @@ public class Application extends Controller {
         }
 
         ContactForm contact = new ContactForm(name, email, subject, content);
-        //contact.send();
+        try {
+            contact.send();
+        } catch (EmailException em){
+            System.out.println("ERROR:> " + em.getMessage());
+            render("Application/contact.html", randomID);
+        }
+
         flash.success("Thank you for message %s!", name);
         Cache.delete(randomID);
         contact();
