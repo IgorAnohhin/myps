@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module relativePaths="true" type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
+  <component name="NewModuleRootManager" inherit-compiler-output="false">
+    <output url="file://C:/production/Curriculum Vitae" />
+    <output-test url="file://C:/test/Curriculum Vitae" />
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/app" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/lib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/modules/selenide-0.1" isTestSource="false" />
     </content>
     <content url="file://c:/play/modules/crud">
       <sourceFolder url="file://c:/play/modules/crud/app" isTestSource="false" />
@@ -15,7 +19,7 @@
     <orderEntry type="jdk" jdkName="1.6" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" exported="">
       <library name="Project Libraries">
         <CLASSES>
           <root url="file://$MODULE_DIR$/lib" />
@@ -25,7 +29,7 @@
         <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" exported="">
       <library name="PlayFramework Dependencies">
         <CLASSES>
           <root url="file://C:/play/framework/lib" />
@@ -35,7 +39,7 @@
         <jarDirectory url="file://C:/play/framework/lib" recursive="false" />
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
           <root url="jar://C:/play/framework/play-1.2.5.jar!/" />
@@ -43,6 +47,48 @@
         <JAVADOC />
         <SOURCES>
           <root url="file://C:/play/framework/src" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/commons-exec-1.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/cssparser-0.9.5.jar!/" />
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/guava-12.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/hamcrest-all-1.3.jar!/" />
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/htmlunit-2.9.jar!/" />
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/htmlunit-core-js-2.9.jar!/" />
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/httpclient-4.1.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/httpcore-4.1.3.jar!/" />
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/httpmime-4.1.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/jna-3.4.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/json-20080701.jar!/" />
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/jsr305-1.3.9.jar!/" />
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/nekohtml-1.9.15.jar!/" />
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/platform-3.4.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/sac-1.3.jar!/" />
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/selenide-1.6.jar!/" />
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/selenium-android-driver-2.25.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/selenium-api-2.25.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/selenium-chrome-driver-2.25.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/selenium-firefox-driver-2.25.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/selenium-htmlunit-driver-2.25.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/selenium-ie-driver-2.25.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/selenium-iphone-driver-2.25.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/selenium-java-2.25.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/selenium-remote-driver-2.25.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/selenium-safari-driver-2.25.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/selenium-support-2.25.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/serializer-2.7.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/webbit-0.4.6.jar!/" />
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/xalan-2.7.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/xercesImpl-2.9.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/xml-apis-1.3.04.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/modules/selenide-0.1/lib/jsr305-1.3.9.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
