@@ -8,7 +8,9 @@
       <sourceFolder url="file://$MODULE_DIR$/app" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/lib" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/modules/selenide-0.1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/conf" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/modules" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/modules/cobertura-2.4/lib" isTestSource="false" />
     </content>
     <content url="file://c:/play/modules/crud">
       <sourceFolder url="file://c:/play/modules/crud/app" isTestSource="false" />
@@ -92,6 +94,7 @@
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="library" exported="" name="cobertura" level="project" />
   </component>
 </module>
 

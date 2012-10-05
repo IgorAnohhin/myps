@@ -13,9 +13,9 @@ import models.Post;
  * To change this template use File | Settings | File Templates.
  */
 
-@CRUD.For(Post.class)
 @Check("admin")
 @With(Secure.class)
+@CRUD.For(Post.class)
 public class Posts extends CRUD{
 
 }

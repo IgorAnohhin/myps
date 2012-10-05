@@ -1,17 +1,13 @@
-//import com.codeborne.selenide.junit.ScreenShooter;
-import org.junit.*;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import play.test.UnitTest;
-
-import java.util.List;
+import helpers.*;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.DOM.*;
-import static com.codeborne.selenide.Navigation.baseUrl;
-import static com.codeborne.selenide.Navigation.open;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+import static com.codeborne.selenide.Navigation.*;
+
+import org.junit.*;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 /**
  * Created with IntelliJ IDEA.
@@ -20,9 +16,7 @@ import static org.junit.Assert.assertNull;
  * Time: 22:40
  * To change this template use File | Settings | File Templates.
  */
-public class ApplicationSpec {
-    //@Rule
-    //public ScreenShooter makeScreenshotOnFailure = ScreenShooter.failedTests();
+public class ApplicationSpec extends UITest {
 
     @Before
     public void startMYPS() {
