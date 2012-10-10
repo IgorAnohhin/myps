@@ -1,13 +1,6 @@
 #{extends 'main.html'/}
 #{set title:'My interests'/}
 
-<div class="team-text">
-    <h2>My Interests & Livestyle</h2>
-    <div class="star-divider"></div>
-</div>
-<div class="about">
-    <p> I am a workaholic. Programming is not only my job but my hobby as well. I am a member of DevClub (Club of Software Developers) in Estonia, Tallinn.<br/>
-        I am a movie addict and a cinemagoer. I also collect movies in my DVD collection.<br/>
-        I love travelling , exploring new places and discovering new things.<br/>
-        I lead an active and healthy lifestyle. I love doing any kind of sport in my free time.<br/>
-</div>
+#{if post}
+    #{display post:post /}
+#{/if}

@@ -1,19 +1,6 @@
 #{extends 'main.html' /}
 #{set title:'Skills' /}
 
-    <div class="team-text">
-        <h2>My Skills & Software</h2>
-        <div class="star-divider"></div>
-    </div>
-    <div class="about">
-        <p> I am specializing in creation of web applications, back-end programming and front-end development.<br/>
-            My experience includes the usage of Java (Spring, JSP), Javascript (Jquery, Ajax), PHP/MySQL and .NET.<br/>
-            I take care of the front-end construction (html/javascript interface) as well as the backend programming (business model and database interaction).<br/><br/>
-
-            Technologies I like to use are listed below but I am always looking to learn new ones.<br/><br/>
-
-            - J2EE (Spring, JSP)<br/>
-            - PHP/MySQL<br/>
-            - Javascript (Jquery, Ajax)<br/>
-            - Databases: MySQL, SQL Server</p>
-    </div>
+#{if post}
+    #{display post:post /}
+#{/if}

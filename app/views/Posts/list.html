@@ -10,8 +10,7 @@
     </div>
 
     <div id="crudListTable">
-        #{crud.table fields:['title', 'author', 'isFront', 'postedDate']}
-
+        #{crud.table fields:['title', 'author', 'menu', 'postedDate']}
             #{crud.custom 'postedDate'}
                 ${object.getPostedDate().format("yyyy-MM-dd")}
             #{/crud.custom}
