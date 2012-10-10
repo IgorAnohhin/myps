@@ -1,4 +1,7 @@
+import models.Menu;
 import org.junit.*;
+
+import java.awt.*;
 import java.util.*;
 
 import play.libs.Mail;
@@ -14,38 +17,38 @@ public class BasicTest extends UnitTest {
 
     @Test
     public void createAndRetrievUserTest() {
-        new User("igor@post.ee", "Igor", "pass", true).save();
-        User igor = User.find("byFullName", "Igor").first();
+        new User("igor@post.ee", "Igor", "balik", true).save();
+        User igor = User.find("byEmail", "igor@post.ee").first();
+        assertNotNull(igor);
+        igor = User.connect("igor@post.ee", "balik");
         assertNotNull(igor);
         assertEquals("Igor", igor.getFullName());
         assertEquals("igor@post.ee", igor.getEmail());
 
-        assertNotNull(User.connect("Igor", "pass"));
-        assertEquals("Igor", User.connect("Igor", "pass").getFullName());
-        assertEquals("igor@post.ee", User.connect("Igor", "pass").getEmail());
+        assertNotNull(User.connect("igor@post.ee", "balik"));
+        assertEquals("Igor", User.connect("igor@post.ee", "balik").getFullName());
+        assertEquals("igor@post.ee", User.connect("igor@post.ee", "balik").getEmail());
     }
 
     @Test
     public void addPostToUserTest(){
-        User igor = new User("igor@post.ee", "Igor", "pass", true).save();
+        User igor = new User("igor@post.ee", "Igor", "balik", true).save();
         assertEquals(igor.getPosts().size(), 0);
 
-        igor.addPost("Post Title", "Post Content", new Date(), true);
+        igor.addPost("Post Title", "Post Content", new Date(), Menu.FRONT);
         assertEquals(igor.getPosts().size(), 1);
 
         assertEquals("Igor", igor.getPosts().get(0).getAuthor().getFullName());
-        //Post postOne = new Post(igor, "Post Title", "Post Content").save();
     }
 
     @Test
     public void createAndRetrievPostTest(){
-        User igor = new User("igor@post.ee", "Igor", "pass", true).save();
+        User igor = new User("igor@post.ee", "Igor", "balik", true).save();
 
-        new Post(igor, "Post Title", "Post Content", new Date(), true).save();
+        new Post(igor, "Post Title", "Post Content", new Date(), Menu.FRONT).save();
         Post post = Post.find("byTitle", "Post Title").first();
         assertNotNull(post);
-        post.setIsFront(true);
-        assertTrue(post.getIsFront());
+        assertEquals(Menu.FRONT, post.getMenu());
     }
 
     @Test
