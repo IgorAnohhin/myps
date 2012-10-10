@@ -1,3 +1,5 @@
+package spec;
+
 import helpers.*;
 
 import static com.codeborne.selenide.Condition.*;
