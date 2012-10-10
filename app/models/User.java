@@ -42,12 +42,12 @@ public class User extends Model {
         this.setIsAdmin(isAdmin);
     }
 
-    public static User connect(String name, String password){
-        return find("byFullNameAndPassword", name, password).first();
+    public static User connect(String email, String password){
+        return find("byEmailAndPassword", email, password).first();
     }
 
-    public void addPost(String title, String content, Date postedDate, Boolean isFront){
-        Post post = new Post(this, title, content, postedDate, isFront).save();
+    public void addPost(String title, String content, Date postedDate, Menu menu){
+        Post post = new Post(this, title, content, postedDate, menu).save();
         this.getPosts().add(post);
         this.save();
     }

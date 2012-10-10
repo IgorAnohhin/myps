@@ -20,21 +20,23 @@ public class Application extends Controller {
     }
 
     public static void index() {
-        Post frontPost = Post.find("byIsFront", true).first();
-        render(frontPost);
+        Post post = Post.find("byMenu", Menu.FRONT).first();
+        render(post);
     }
 
     public static void myWorks(){
-        List<Post> posts = Post.find("byIsFront", false).fetch();
+        List<Post> posts = Post.find("menu = ? order by postedDate desc", Menu.WORKS).fetch();
         render(posts);
     }
 
     public static void skills(){
-        render();
+        Post post = Post.find("byMenu", Menu.SKILLS).first();
+        render(post);
     }
 
     public static void myInterests(){
-        render();
+        Post post = Post.find("byMenu", Menu.INTERESTS).first();
+        render(post);
     }
 
     public static void contact(){

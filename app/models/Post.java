@@ -27,18 +27,19 @@ public class Post extends Model {
 
     private Date postedDate;
 
-    private Boolean isFront;
+    @Required(message = "Menu is required")
+    private Menu menu;
 
     @ManyToOne
     @Required(message = "User is required")
     private User author;
 
-    public Post(User author, String title, String content, Date postedDate, Boolean isFront){
+    public Post(User author, String title, String content, Date postedDate, Menu menu){
         this.setAuthor(author);
         this.setTitle(title);
         this.setContent(content);
         this.setPostedDate(postedDate);
-        this.setIsFront(isFront);
+        this.setMenu(menu);
     }
 
     public String getTitle() {
@@ -73,12 +74,12 @@ public class Post extends Model {
         this.author = author;
     }
 
-    public Boolean getIsFront() {
-        return isFront;
+    public void setMenu(Menu menu){
+        this.menu = menu;
     }
 
-    public void setIsFront(Boolean front) {
-        isFront = front;
+    public Menu getMenu(){
+        return menu;
     }
 
     public String toString(){
