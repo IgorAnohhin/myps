@@ -3,10 +3,10 @@
 
 # Test data
 
-User(my):
+Author(my):
     email:          igor@post.ee
     fullName:       Igor
-    password:       pass
+    password:       balik
     isAdmin:        true
     posts:          [p1, p2, p3]
 
@@ -14,66 +14,112 @@ Post(p1):
     title:          A little about myself
     postedDate:     2012-09-25
     author:         my
-    isFront:        true
+    menu:           FRONT
     content:        >
-                    Phone (mobile): +372 53 73 7931
-                    e-mail: <a href="mailto:programming@ianohhin.eu">programming@ianohhin.eu</a>
-
-                    Welcome to my online portfolio !
-                    My name is Igor Anohhin, I am a freelance programmer living in Tallinn, Estonia. I have graduated with a bachelor's degree in Programming at Tallinn Computer Science College and this portfolio showcases my work as a web developer , as well as it highlights some of the website projects I have taken part in.
-                    I am open to work with companies and individuals.I create simple, useable and accessible websites built according to web standards.
-                    To find out more about my background you can check out my CV.
-                    If you're interested in learning more, or would like to find out pricing information, get in touch with me by e-mail or by filling in the form here.
+                    Welcome to my personal site!<br/>
+                    My name is Igor Anohhin, I am a programmer living in Tallinn, Estonia.<br/>
+                    I have graduated with a bachelor's degree in Programming at Tallinn Computer Science College.<br/>
+                    Currently, I am working for "Elion Enterprises Limited", the largest telecommunications and Internet service provider in Estonia which belongs to TeliaSonera AB,
+                    the dominant telephone company and mobile network operator in Sweden and Finland.
+                    I work in the department of quality control, where I am involved in automation testing process.<br/>
+                    In my free time I work as a freelance programmer.<br/>
+                    This site showcases my work as a programmer, as well as it highlights some of the projects I have taken part in.<br/>
+                    I am open to work with companies and individuals. I create simple, useable and accessible websites built according to web standards.<br/>
+                    To find out more about my background you can check out my <a href="/public/images/IgorAnohhinCV.pdf">CV</a>.<br/>
+                    If you're interested in learning more, or would like to find out pricing information, get in touch with me by <a href="mailto:i.anohhin@gmail.com">e-mail</a> or by filling in the form <a href="/contact">here</a>.
+                    <br/><br/>
+                    E-mail: <a href="mailto:i.anohhin@gmail.com">i.anohhin@gmail.com</a>
+                    Tel: (+372) 53 737 931<br/>
+                    Skype: igor.anohhin<br/>
 
 Post(p2):
-    title:          Post Title 2
-    postedDate:     2012-09-25
+    title:          My personal site.
+    postedDate:     2012-09-30
     author:         my
-    isFront:        false
+    menu:           WORKS
     content:        >
-                    Welcome to my online portfolio !
-                    My name is Igor Anohhin, I am a freelance programmer living in Tallinn, Estonia. I have graduated with a bachelor's degree in Programming at Tallinn Computer Science College and this portfolio showcases my work as a web developer , as well as it highlights some of the website projects I have taken part in.
-                    I am open to work with companies and individuals.I create simple, useable and accessible websites built according to web standards.
-                    To find out more about my background you can check out my CV.
-                    If you're interested in learning more, or would like to find out pricing information, get in touch with me by e-mail or by filling in the form here.
+                    <img src="/public/images/media/igor.png" alt="My personal site" with="150" height="100" /><br/>
+                    I created this site, which includes my personal data and admin area for adding posts.<br/>
+                    For its creation I used Play!(1.2.5), modern MVC framework for web application development,<br/>
+                    which includes Hibernate, Security as well as Templates.<br/>
+                    The programming languages I have used are Java and GSP.<br/>
+                    I have also written Unit, UI and Functional tests. For writing Unit tests i have used JUnit, Selenide (library for easier using of Selenium WebDriver for automated tests in Java) for UI
+                    written by Codeborne Estonia and play.test library for Functional tests.<br/>
+                    You can download this application from Git hub.
 
 Post(p3):
-    title:          Post Title 3
-    postedDate:     2012-09-25
+    title:          Web Application "Order Management System"
+    postedDate:     2012-09-29
     author:         my
-    isFront:        false
+    menu:           WORKS
     content:        >
-                    Welcome to my online portfolio !
-                    My name is Igor Anohhin, I am a freelance programmer living in Tallinn, Estonia. I have graduated with a bachelor's degree in Programming at Tallinn Computer Science College and this portfolio showcases my work as a web developer , as well as it highlights some of the website projects I have taken part in.
-                    I am open to work with companies and individuals.I create simple, useable and accessible websites built according to web standards.
-                    To find out more about my background you can check out my CV.
-                    If you're interested in learning more, or would like to find out pricing information, get in touch with me by e-mail or by filling in the form here.
+                    <img src="/public/images/media/nordaza.png" alt="Nordaza.eu" with="150" height="100" /><br/>
+                    Web application "Order Management System" is used to save and process receiving orders.<br/>
+                    With this application it is possible to draw up a bill and to make price inquiries as well as to place an order of the required details.<br/>
+                    For its creation I used Spring, modern MVC framework for web application development,<br/>
+                    which includes Spring Security, Spring Hibernate, Spring Tiles, JSP.<br/>
+                    The following technologies are also actively used in the above mentioned application: Ajax, Jquery UI.<br/>
+                    You can download this application from Git hub.
 
 Post(p4):
-    title:          Post Title 4
-    postedDate:     2012-09-25
+    title:          Accounting news portal "RUP.ee"
+    postedDate:     2012-09-28
     author:         my
-    isFront:        false
+    menu:           WORKS
     content:        >
-                    Welcome to my online portfolio !
-                    My name is Igor Anohhin, I am a freelance programmer living in Tallinn, Estonia. I have graduated with a bachelor's degree in Programming at Tallinn Computer Science College and this portfolio showcases my work as a web developer , as well as it highlights some of the website projects I have taken part in.
-                    I am open to work with companies and individuals.I create simple, useable and accessible websites built according to web standards.
-                    To find out more about my background you can check out my CV.
-                    If you're interested in learning more, or would like to find out pricing information, get in touch with me by e-mail or by filling in the form here.
+                    <img src="/public/images/media/rup.png" alt="Rup.ee" with="150" height="100" /><br/>
+                    News portal which aims to provide a large number of articles, news, auditing, bank and finance for
+                    professional accountants and accounting experts.<br/>
+                    PHP and MySql were used to create this news portal.<br/>
+                    This portal was integrated with Pangalink (Swedbank and SEB) payment system, for security payment through the Internet.
+
 
 Post(p5):
-    title:          Skills
+    title:          Web Site "Association of Persons With Disabilities"
+    postedDate:     2012-09-28
+    author:         my
+    menu:           WORKS
+    content:        >
+                    <img src="/public/images/media/nika.png" alt="Nika" with="150" height="100" /><br/>
+                    This site was created to support persons with disabilities, where they can post their buy-and- sell ads as well as make new friends, post their job advertisments and exchange their contacts.<br/>
+                    I used PHP and MySql to create this news portal.
+
+Post(p6):
+    title:          Instant Messanger Application "MyIM"
+    postedDate:     2012-09-28
+    author:         my
+    menu:           WORKS
+    content:        >
+                    <img src="/public/images/media/myim.jpg" alt="MyIM" with="150" height="100" /><br/>
+                    "MyIM" is a simple to use application used to exchange instant as well as text messages.<br/>
+                    In given application I used modern protocol XMPP (Jabber) which, for example, also exists in Google Talk.<br/>
+                    For its creation I used .NET Framework 3.5, C# and WPF.<br/>
+                    You can download this application from Git hub.
+
+Post(p7):
+    title:          My hobbies and Interests
     postedDate:     2012-09-25
     author:         my
-    isFront:        false
+    menu:           INTERESTS
     content:        >
-                    I am specializing in creation of web applications, back-end programming and front-end development.
-                    My experience includes the usage of Java (Spring, JSP), Javascript (Jquery, Ajax), PHP/MySQL and .NET.
-                    I take care of the front-end construction (html/javascript interface) as well as the backend programming (business model and database interaction).
+                    I lead an active and healthy lifestyle. I like doing any kind of sport in my free time as well as going to sauna.<br/>
+                    I love travelling, exploring new places and discovering new things.<br/>
+                    I'm not a cinema - goer but I'am fond of watching films at home.
 
-                    Technologies I like to use are listed below but I am always looking to learn new ones.
 
-                    - J2EE (Spring, JSP)
-                    - PHP/MySQL
-                    - Javascript (Jquery, Ajax)
-                    - Databases: MySQL, SQL Server
+Post(p8):
+    title:          My Skills & Services
+    postedDate:     2012-09-25
+    author:         my
+    menu:           SKILLS
+    content:        >
+                    I offer my services in the creation of web applications, web pages and personal pages or portfolios.<br/>
+                    I am also specialized in test automation processes.
+                    <br/><br/>
+                    The technologies I prefer to use are listed below.
+                    <br/><br/>
+                    - J2EE (Spring, Play! Framework, JSP/GSP)<br/>
+                    - Javascript (Jquery, Ajax)<br/>
+                    - Testing: Ruby (Watir, RSpec), Selenium (Selenide)<br/>
+                    - Databases: MySQL, Oracle(PL/SQL)<br/>
+                    - CVS: Git
