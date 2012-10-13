@@ -39,10 +39,10 @@ public class ContactForm {
             new sun.security.action.GetPropertyAction("line.separator"));
 
         SimpleEmail eemail = new SimpleEmail();
-        eemail.setFrom("i.anohhin@gmail.com");
+        eemail.setFrom("myps.contact@gmail.com");
         eemail.addTo("i.anohhin@gmail.com");
         eemail.setSubject(this.getSubject());
-        eemail.setMsg("This email (1) from: " + this.getName() + sep + this.getEmail() + sep + sep + this.getContent());
+        eemail.setMsg("This email from: " + this.getName() + sep + this.getEmail() + sep + sep + this.getContent());
         Mail.send(eemail);
     }
 
