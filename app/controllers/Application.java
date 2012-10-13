@@ -26,7 +26,7 @@ public class Application extends Controller {
 
     public static void myWorks(){
         List<Post> posts = Post.find("menu = ? order by postedDate desc", Menu.WORKS).fetch();
-        render(posts);
+        renderTemplate("Application/myworks.html", posts);
     }
 
     public static void skills(){
@@ -36,7 +36,7 @@ public class Application extends Controller {
 
     public static void myInterests(){
         Post post = Post.find("byMenu", Menu.INTERESTS).first();
-        render(post);
+        renderTemplate("Application/myinterests.html", post);
     }
 
     public static void contact(){
