@@ -6,7 +6,7 @@
 </div>
 #{list items:_post, as:'post'}
 <div class="about">
-    <h4>${post.getTitle()}</h4>
+    <h4>${post.getTitle().raw()}</h4>
     <p>${post.getContent().raw()}</p>
 </div>
 <div class="spacer"></div>
