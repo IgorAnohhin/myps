@@ -32,9 +32,9 @@ public class Post extends Model {
 
     @ManyToOne
     @Required(message = "User is required")
-    private User author;
+    private Author author;
 
-    public Post(User author, String title, String content, Date postedDate, Menu menu){
+    public Post(Author author, String title, String content, Date postedDate, Menu menu){
         this.setAuthor(author);
         this.setTitle(title);
         this.setContent(content);
@@ -66,11 +66,11 @@ public class Post extends Model {
         this.postedDate = postedDate;
     }
 
-    public User getAuthor() {
+    public Author getAuthor() {
         return author;
     }
 
-    public void setAuthor(User author) {
+    public void setAuthor(Author author) {
         this.author = author;
     }
 

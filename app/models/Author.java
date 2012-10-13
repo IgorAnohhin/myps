@@ -16,7 +16,7 @@ import play.db.jpa.*;
  * To change this template use File | Settings | File Templates.
  */
 @Entity
-public class User extends Model {
+public class Author extends Model {
 
     @Email
     @Required(message = "Email is required!")
@@ -34,7 +34,7 @@ public class User extends Model {
     @OneToMany(mappedBy = "author", cascade = CascadeType.ALL)
     private List<Post> posts;
 
-    public User(String email, String fullName, String password, Boolean isAdmin){
+    public Author(String email, String fullName, String password, Boolean isAdmin){
         this.setPosts(new ArrayList<Post>());
         this.setEmail(email);
         this.setFullName(fullName);
@@ -42,7 +42,7 @@ public class User extends Model {
         this.setIsAdmin(isAdmin);
     }
 
-    public static User connect(String email, String password){
+    public static Author connect(String email, String password){
         return find("byEmailAndPassword", email, password).first();
     }
 

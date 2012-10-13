@@ -9,7 +9,7 @@ CREATE TABLE Post (
   `title` varchar(255) DEFAULT NULL,
   `author_id` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  FOREIGN KEY (author_id) REFERENCES User(id)
+  FOREIGN KEY (author_id) REFERENCES Author(id)
 );
 # --- !Downs
 DROP TABLE Post;

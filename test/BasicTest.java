@@ -1,7 +1,6 @@
 import models.Menu;
 import org.junit.*;
 
-import java.awt.*;
 import java.util.*;
 
 import play.libs.Mail;
@@ -17,22 +16,22 @@ public class BasicTest extends UnitTest {
 
     @Test
     public void createAndRetrievUserTest() {
-        new User("igor@post.ee", "Igor", "balik", true).save();
-        User igor = User.find("byEmail", "igor@post.ee").first();
+        new Author("igor@post.ee", "Igor", "balik", true).save();
+        Author igor = Author.find("byEmail", "igor@post.ee").first();
         assertNotNull(igor);
-        igor = User.connect("igor@post.ee", "balik");
+        igor = Author.connect("igor@post.ee", "balik");
         assertNotNull(igor);
         assertEquals("Igor", igor.getFullName());
         assertEquals("igor@post.ee", igor.getEmail());
 
-        assertNotNull(User.connect("igor@post.ee", "balik"));
-        assertEquals("Igor", User.connect("igor@post.ee", "balik").getFullName());
-        assertEquals("igor@post.ee", User.connect("igor@post.ee", "balik").getEmail());
+        assertNotNull(Author.connect("igor@post.ee", "balik"));
+        assertEquals("Igor", Author.connect("igor@post.ee", "balik").getFullName());
+        assertEquals("igor@post.ee", Author.connect("igor@post.ee", "balik").getEmail());
     }
 
     @Test
     public void addPostToUserTest(){
-        User igor = new User("igor@post.ee", "Igor", "balik", true).save();
+        Author igor = new Author("igor@post.ee", "Igor", "balik", true).save();
         assertEquals(igor.getPosts().size(), 0);
 
         igor.addPost("Post Title", "Post Content", new Date(), Menu.FRONT);
@@ -43,7 +42,7 @@ public class BasicTest extends UnitTest {
 
     @Test
     public void createAndRetrievPostTest(){
-        User igor = new User("igor@post.ee", "Igor", "balik", true).save();
+        Author igor = new Author("igor@post.ee", "Igor", "balik", true).save();
 
         new Post(igor, "Post Title", "Post Content", new Date(), Menu.FRONT).save();
         Post post = Post.find("byTitle", "Post Title").first();

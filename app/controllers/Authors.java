@@ -1,9 +1,7 @@
 package controllers;
 
-import play.*;
+import models.Author;
 import play.mvc.*;
-
-import models.User;
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,9 +10,9 @@ import models.User;
  * Time: 23:33
  * To change this template use File | Settings | File Templates.
  */
-@CRUD.For(User.class)
+@CRUD.For(Author.class)
 @Check("admin")
 @With(Secure.class)
-public class Users extends CRUD {
+public class Authors extends CRUD {
 
 }
