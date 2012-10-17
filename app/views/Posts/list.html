@@ -10,10 +10,18 @@
     </div>
 
     <div id="crudListTable">
-        #{crud.table fields:['title', 'author', 'menu', 'postedDate']}
+        #{crud.table fields:['title', 'author', 'menu', 'postedDate', ''], id:'row'}
+
+            #{crud.custom 'title'}
+                ${object.getTitle().raw()}
+            #{/crud.custom}
             #{crud.custom 'postedDate'}
                 ${object.getPostedDate().format("yyyy-MM-dd")}
             #{/crud.custom}
+            #{crud.custom ''}
+                <a href="@{show(object.getId())}" >Edit</a>
+            #{/crud.custom}
+
         #{/crud.table}
     </div>
 
