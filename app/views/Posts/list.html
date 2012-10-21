@@ -10,7 +10,7 @@
     </div>
 
     <div id="crudListTable">
-        #{crud.table fields:['title', 'author', 'menu', 'postedDate', ''], rowid:'row'}
+        #{crud.table fields:['title', 'author', 'menu', 'postedDate', ''], rowid:'row', tableid:'draggable'}
 
             #{crud.custom 'title'}
                 ${object.getTitle().raw()}
@@ -24,6 +24,18 @@
 
         #{/crud.table}
     </div>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Initialise the table
+            $("#draggable").tableDnD({
+                onDragStyle: "background-color: #DDD",
+                onDrop:function(table, row){
+                    alert("drop");
+                }
+            });
+        });
+    </script>
 
     <div id="crudListPagination">
         #{crud.pagination /}
