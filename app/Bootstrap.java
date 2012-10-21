@@ -15,6 +15,7 @@ public class Bootstrap extends Job {
 
     public void doJob() {
         if(Author.count() == 0) {
+            Fixtures.delete();
             Fixtures.loadModels("initial-data.yml");
         }
     }
