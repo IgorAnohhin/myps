@@ -8,13 +8,13 @@ Author(my):
     fullName:       Igor
     password:       balik
     isAdmin:        true
-    posts:          [p1, p2, p3]
 
 Post(p1):
     title:          A little about myself
     postedDate:     2012-09-25
     author:         my
     menu:           FRONT
+    sequence:       1
     content:        >
                     Welcome to my personal site!<br/>
                     My name is Igor Anohhin, I am a programmer living in Tallinn, Estonia.<br/>
@@ -37,6 +37,7 @@ Post(p2):
     postedDate:     2012-09-30
     author:         my
     menu:           WORKS
+    sequence:       1
     content:        >
                     <img src="/public/images/media/igor.png" alt="My personal site" with="150" height="100" /><br/>
                     I created this site, which includes my personal data and admin area for adding posts.<br/>
@@ -52,6 +53,7 @@ Post(p3):
     postedDate:     2012-09-29
     author:         my
     menu:           WORKS
+    sequence:       2
     content:        >
                     <img src="/public/images/media/nordaza.png" alt="Nordaza.eu" with="150" height="100" /><br/>
                     Web application "Order Management System" is used to save and process receiving orders.<br/>
@@ -66,6 +68,7 @@ Post(p4):
     postedDate:     2012-09-28
     author:         my
     menu:           WORKS
+    sequence:       3
     content:        >
                     <img src="/public/images/media/rup.png" alt="Rup.ee" with="150" height="100" /><br/>
                     News portal which aims to provide a large number of articles, news, auditing, bank and finance for
@@ -79,6 +82,7 @@ Post(p5):
     postedDate:     2012-09-28
     author:         my
     menu:           WORKS
+    sequence:       4
     content:        >
                     <img src="/public/images/media/nika.png" alt="Nika" with="150" height="100" /><br/>
                     This site was created to support persons with disabilities, where they can post their buy-and- sell ads as well as make new friends, post their job advertisments and exchange their contacts.<br/>
@@ -89,6 +93,7 @@ Post(p6):
     postedDate:     2012-09-28
     author:         my
     menu:           WORKS
+    sequence:       5
     content:        >
                     <img src="/public/images/media/myim.jpg" alt="MyIM" with="150" height="100" /><br/>
                     "MyIM" is a simple to use application used to exchange instant as well as text messages.<br/>
@@ -101,6 +106,7 @@ Post(p7):
     postedDate:     2012-09-25
     author:         my
     menu:           INTERESTS
+    sequence:       1
     content:        >
                     I lead an active and healthy lifestyle. I like doing any kind of sport in my free time as well as going to sauna.<br/>
                     I love travelling, exploring new places and discovering new things.<br/>
@@ -112,6 +118,7 @@ Post(p8):
     postedDate:     2012-09-25
     author:         my
     menu:           SKILLS
+    sequence:       1
     content:        >
                     I offer my services in the creation of web applications, web pages and personal pages or portfolios.<br/>
                     I am also specialized in test automation processes.

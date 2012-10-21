@@ -25,7 +25,7 @@ public class Application extends Controller {
     }
 
     public static void myWorks(){
-        List<Post> posts = Post.find("menu = ? order by postedDate desc", Menu.WORKS).fetch();
+        List<Post> posts = Post.find("menu = ? order by sequence asc", Menu.WORKS).fetch();
         renderTemplate("Application/myworks.html", posts);
     }
 

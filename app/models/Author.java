@@ -46,8 +46,8 @@ public class Author extends Model {
         return find("byEmailAndPassword", email, password).first();
     }
 
-    public void addPost(String title, String content, Date postedDate, Menu menu){
-        Post post = new Post(this, title, content, postedDate, menu).save();
+    public void addPost(String title, String content, Date postedDate, Menu menu, Long sequence){
+        Post post = new Post(this, title, content, postedDate, menu, sequence).save();
         this.getPosts().add(post);
         this.save();
     }

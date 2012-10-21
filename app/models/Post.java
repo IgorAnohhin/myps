@@ -30,16 +30,23 @@ public class Post extends Model {
     @Required(message = "Menu is required")
     private Menu menu;
 
+    private Long sequence;
+
     @ManyToOne
     @Required(message = "User is required")
     private Author author;
 
-    public Post(Author author, String title, String content, Date postedDate, Menu menu){
+    public Post(Author author, String title, String content, Date postedDate, Menu menu, Long sequence){
         this.setAuthor(author);
         this.setTitle(title);
         this.setContent(content);
         this.setPostedDate(postedDate);
         this.setMenu(menu);
+        this.setSequence(sequence);
+    }
+
+    public Long getPostsCount(){
+        return count();
     }
 
     public String getTitle() {
@@ -84,5 +91,13 @@ public class Post extends Model {
 
     public String toString(){
         return this.getTitle();
+    }
+
+    public Long getSequence() {
+        return sequence;
+    }
+
+    public void setSequence(Long sequience) {
+        this.sequence = sequience;
     }
 }

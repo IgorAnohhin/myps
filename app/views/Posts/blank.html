@@ -49,6 +49,13 @@
                     $("#posted_date").datepick({dateFormat: 'yyyy-mm-dd'});
                 </script>
             #{/crud.custom}
+
+            #{crud.custom 'sequence'}
+                <label for='sequence'>
+                    &{'sequence'}
+                </label>
+                <input type='text' name='object.sequence' id='sequence' size='5' value='${object.getPostsCount()+1}'/>
+            #{/crud.custom}
         #{/crud.form}
         <p class="crudButtons">
             <a href="@{Posts.list()}">Posts</a>

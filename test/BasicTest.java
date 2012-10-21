@@ -34,7 +34,7 @@ public class BasicTest extends UnitTest {
         Author igor = new Author("igor@post.ee", "Igor", "balik", true).save();
         assertEquals(igor.getPosts().size(), 0);
 
-        igor.addPost("Post Title", "Post Content", new Date(), Menu.FRONT);
+        igor.addPost("Post Title", "Post Content", new Date(), Menu.FRONT, 1L);
         assertEquals(igor.getPosts().size(), 1);
 
         assertEquals("Igor", igor.getPosts().get(0).getAuthor().getFullName());
@@ -44,10 +44,23 @@ public class BasicTest extends UnitTest {
     public void createAndRetrievPostTest(){
         Author igor = new Author("igor@post.ee", "Igor", "balik", true).save();
 
-        new Post(igor, "Post Title", "Post Content", new Date(), Menu.FRONT).save();
+        new Post(igor, "Post Title", "Post Content", new Date(), Menu.FRONT, 2L).save();
         Post post = Post.find("byTitle", "Post Title").first();
         assertNotNull(post);
         assertEquals(Menu.FRONT, post.getMenu());
+    }
+
+    @Test
+    public void getPostsCountTest(){
+        Author igor = new Author("igor@post.ee", "Igor", "balik", true).save();
+
+        Post post = new Post(igor, "Post Title", "Post Content", new Date(), Menu.WORKS, 1L).save();
+        Long count = post.getPostsCount();
+        assertNotNull(count);
+        assertEquals((Long)1L, count);
+        new Post(igor, "Post Title", "Post Content", new Date(), Menu.WORKS, 2L).save();
+        count = post.getPostsCount();
+        assertEquals((Long)2L, count);
     }
 
     @Test

@@ -10,7 +10,7 @@
     </div>
 
     <div id="crudListTable">
-        #{crud.table fields:['title', 'author', 'menu', 'postedDate', ''], id:'row'}
+        #{crud.table fields:['title', 'author', 'menu', 'postedDate', ''], rowid:'row'}
 
             #{crud.custom 'title'}
                 ${object.getTitle().raw()}
